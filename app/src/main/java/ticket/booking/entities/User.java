@@ -9,6 +9,55 @@ public class User {
     private List<Ticket> ticketsBooked;
     private String userId;
 
+    public User(String name, String password, String hashedPassword, List<Ticket> ticketsBooked, String userId){
+        this.name = name;
+        this.password = password;
+        this.hashedPassword = hashedPassword;
+        this.ticketsBooked = ticketsBooked;
+        this.userId = userId;
+    }
+    public User(){}
 
+    public String getName(){
+        return this.name;
+    }
+    public String getPassword(){
+        return this.password;
+    }
+    public String getHashedPassword(){
+        return this.hashedPassword;
+    }
+    public List<Ticket> getTicketsBooked(){
+        return this.ticketsBooked;
+    }
+
+    public String getUserId(){
+        return this.userId;
+    }
+    public void printTickets(){
+        for (Ticket t : ticketsBooked) {
+            System.out.println(t.getTicketInfo());
+        }
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setHashedPassword(String hashedPassword){
+        this.hashedPassword = hashedPassword;
+    }
+
+    public void setPassword(String password){
+        this.password = password;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public void setTicketsBooked(List<Ticket> ticketsBooked){
+        this.ticketsBooked = ticketsBooked;
+    }
 
 }
